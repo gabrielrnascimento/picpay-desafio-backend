@@ -1,51 +1,5 @@
 # Desafio Back-end PicPay
 
-Primeiramente, obrigado pelo seu interesse em trabalhar na melhor plataforma de pagamentos do mundo!
-Abaixo você encontrará todos as informações necessárias para iniciar o seu teste.
-
-## Avisos antes de começar
-
-- Leia com atenção este documento todo e tente seguir ao **máximo** as instruções;
-- Crie um repositório no seu GitHub **sem citar nada relacionado ao PicPay**;
-- Faça seus commits no seu repositório;
-- Envie o link do seu repositório para o email **do recrutador responsável**;
-- Você poderá consultar o Google, Stackoverflow ou algum projeto particular na sua máquina;
-- Dê uma olhada nos [Materiais úteis](#materiais-úteis);
-- Dê uma olhada em como será a [entrevista](#para-o-dia-da-entrevista-técnica);
-- Fique à vontade para perguntar qualquer dúvida aos recrutadores;
-- Fique tranquilo, respire, assim como você, também já passamos por essa etapa. Boa sorte! :)
-
-_Corpo do Email com o link do repositório do desafio_
-
-> Seu Nome
->
-> Nome do recrutador
->
-> Link do repositório
->
-> Link do Linkedin
-
-### Sobre o ambiente da aplicação:
-
-- Escolha qualquer framework que se sinta **confortável** em trabalhar. Esse teste **não faz** nenhuma preferência,
-  portanto decida por aquele com o qual estará mais seguro em apresentar e conversar com a gente na entrevista ;)
-
-- Você pode, inclusive, não optar por framework nenhum. Neste caso, recomendamos a implementação do serviço via script
-  para diminuir a sobrecarga de criar um servidor web;
-
-- Ainda assim, se optar por um framework tente evitar usar muito métodos mágicos ou atalhos já prontos. Sabemos que
-  essas facilidades aumentam a produtividade no dia-a-dia mas aqui queremos ver o **seu** código e a sua forma de
-  resolver problemas;
-
-> Valorizamos uma boa estrutura de containeres criada por você.
-
-## Para o dia da entrevista técnica
-
-Na data marcada pelo recrutador tenha sua aplicação rodando na sua máquina local para execução dos testes e para nos
-mostrar os pontos desenvolvidos e possíveis questionamentos.
-Faremos um code review junto contigo como se você já fosse do nosso time :heart:, você poderá explicar o que você
-pensou, como arquitetou e como pode evoluir o projeto.
-
 ## Objetivo: PicPay Simplificado
 
 O PicPay Simplificado é uma plataforma de pagamentos simplificada. Nela é possível depositar e realizar transferências
@@ -54,7 +8,7 @@ transferências entre eles.
 
 ### Requisitos
 
-A seguir estão algumas regras de negócio que são importantes para o funcionamento do PicPay Simplificado:
+A seguir estão algumas regras de negócio importantes para o funcionamento do PicPay Simplificado:
 
 - Para ambos tipos de usuário, precisamos do `Nome Completo`, `CPF`, `e-mail` e `Senha`. CPF/CNPJ e e-mails devem ser
   únicos no sistema. Sendo assim, seu sistema deve permitir apenas um cadastro com o mesmo CPF ou endereço de e-mail;
@@ -101,7 +55,7 @@ Caso ache interessante, faça uma **proposta** de endpoint e apresente para os e
 # Avaliação
 
 Apresente sua solução utilizando o framework que você desejar, justificando a escolha.
-Atente-se a cumprir a maioria dos requisitos, pois você pode cumprir-los parcialmente e durante a avaliação vamos bater
+Atente-se a cumprir a maioria dos requisitos, pois você pode cumpri-los parcialmente e durante a avaliação vamos bater
 um papo a respeito do que faltou.
 
 ## O que será avaliado e valorizamos :heart:
@@ -125,7 +79,7 @@ Conhecimentos intermediários de construção de projetos manuteníveis:
 
 Aptidões para criar e manter aplicações de alta qualidade:
 - Aplicação de conhecimentos de observabilidade
-- Utlização de CI para rodar testes e análises estáticas
+- Utilização de CI para rodar testes e análises estáticas
 - Conhecimentos sobre bancos de dados não-relacionais
 - Aplicação de arquiteturas (CQRS, Event-sourcing, Microsserviços, Monolito modular)
 - Uso e implementação de mensageria
@@ -133,17 +87,6 @@ Aptidões para criar e manter aplicações de alta qualidade:
 - Boas habilidades na aplicação do conhecimento do negócio no software
 - Implementação margeada por ferramentas de qualidade (análise estática, PHPMD, PHPStan, PHP-CS-Fixer etc)
 - Noções de PHP assíncrono
-
-### Boas práticas
-
-Caso use PHP tente seguir as [PSRs](https://www.php-fig.org/psr/psr-12/), caso use outro framework ou linguagem, tente
-seguir as boas práticas da comunidade.
-
-Uma sugestão para revisar a qualidade do seu código é usar ferramentas como o PHPMD antes de submeter o seu teste.
-O comando a seguir pode ser usado para rodar o PHPMD no seu projeto localmente, por exemplo:
-```bash
-docker run -it --rm -v $(pwd):/project -w /project jakzal/phpqa phpmd app text cleancode,codesize,controversial,design,naming,unusedcode
-```
 
 ## O que NÃO será avaliado :warning:
 
