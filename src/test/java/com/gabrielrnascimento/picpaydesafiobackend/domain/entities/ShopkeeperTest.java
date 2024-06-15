@@ -27,5 +27,15 @@ class ShopkeeperTest {
     void shouldSetDocumentTypeAsCNPJ() {
         assertEquals(DocumentType.CNPJ, sut.getDocumentType());
     }
+
+    @Test
+    void shouldCreateShopkeeperIfIdIsNotProvided() {
+        var shopkeeper = new Shopkeeper(name, email, password, document);
+        assertEquals(name, shopkeeper.getName());
+        assertEquals(email, shopkeeper.getEmail());
+        assertEquals(password, shopkeeper.getPassword());
+        assertEquals(DocumentType.CNPJ, shopkeeper.getDocumentType());
+        assertEquals(document, shopkeeper.getDocument());
+    }
 }
 

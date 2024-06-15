@@ -27,5 +27,15 @@ class CustomerTest {
     void shouldSetDocumentTypeAsCPF() {
         assertEquals(DocumentType.CPF, sut.getDocumentType());
     }
+
+    @Test
+    void shouldCreateUserIfIdIsNotProvided() {
+        final Customer sut = new Customer(name, email, password, document);
+        assertEquals(name, sut.getName());
+        assertEquals(email, sut.getEmail());
+        assertEquals(password, sut.getPassword());
+        assertEquals(DocumentType.CPF, sut.getDocumentType());
+        assertEquals(document, sut.getDocument());
+    }
 }
 
