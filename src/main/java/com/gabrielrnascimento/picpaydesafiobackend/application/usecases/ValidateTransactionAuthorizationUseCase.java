@@ -14,6 +14,6 @@ public class ValidateTransactionAuthorizationUseCase implements IValidateTransac
 
     @Override
     public boolean isAuthorized() {
-        return authorizationGateway.isResponse();
+        return authorizationGateway.isAuthorized();
     }
 }

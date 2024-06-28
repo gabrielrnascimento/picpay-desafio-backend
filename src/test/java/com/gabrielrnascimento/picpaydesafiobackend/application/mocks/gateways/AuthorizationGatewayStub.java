@@ -12,7 +12,7 @@ public class AuthorizationGatewayStub implements IAuthorizationGateway {
     }
 
     @Override
-    public boolean isResponse() {
+    public boolean isAuthorized() {
         return response;
     }
 }
