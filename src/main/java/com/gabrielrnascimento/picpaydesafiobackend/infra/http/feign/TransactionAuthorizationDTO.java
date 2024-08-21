@@ -1,6 +1,6 @@
 package com.gabrielrnascimento.picpaydesafiobackend.infra.http.feign;
 
-import com.gabrielrnascimento.picpaydesafiobackend.infra.gateways.AuthorizationStatus;
+import com.gabrielrnascimento.picpaydesafiobackend.infra.gateways.authorization.AuthorizationStatus;
 
 
 public record TransactionAuthorizationDTO(String message) {

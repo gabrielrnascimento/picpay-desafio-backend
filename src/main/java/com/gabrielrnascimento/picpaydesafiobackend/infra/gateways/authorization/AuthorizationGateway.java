@@ -1,4 +1,4 @@
-package com.gabrielrnascimento.picpaydesafiobackend.infra.gateways;
+package com.gabrielrnascimento.picpaydesafiobackend.infra.gateways.authorization;
 
 import com.gabrielrnascimento.picpaydesafiobackend.application.gateways.IAuthorizationGateway;
 import com.gabrielrnascimento.picpaydesafiobackend.infra.http.feign.TransactionAuthorizationDTO;

@@ -1,4 +1,4 @@
-package com.gabrielrnascimento.picpaydesafiobackend.infra.gateways;
+package com.gabrielrnascimento.picpaydesafiobackend.infra.gateways.authorization;
 
 public enum AuthorizationStatus {
     AUTHORIZED("Authorized"),
