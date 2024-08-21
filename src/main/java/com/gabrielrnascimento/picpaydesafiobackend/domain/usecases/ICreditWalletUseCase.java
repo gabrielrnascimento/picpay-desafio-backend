@@ -1,9 +1,11 @@
 package com.gabrielrnascimento.picpaydesafiobackend.domain.usecases;
 
+import com.gabrielrnascimento.picpaydesafiobackend.domain.entities.Wallet;
+
 import java.math.BigDecimal;
 
 
 public interface ICreditWalletUseCase {
 
-    void credit(BigDecimal amount);
+    void credit(Wallet wallet, BigDecimal amount);
 }

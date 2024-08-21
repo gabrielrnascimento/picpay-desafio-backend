@@ -17,8 +17,8 @@ public class GetWalletUseCase implements IGetWalletUseCase {
     }
 
     @Override
-    public Wallet getWallet(UUID walledId) {
-        Optional<Wallet> result = walletGateway.findById(walledId);
+    public Wallet getWallet(UUID userId) {
+        Optional<Wallet> result = walletGateway.findByUserId(userId);
         return result.orElse(null);
     }
 }

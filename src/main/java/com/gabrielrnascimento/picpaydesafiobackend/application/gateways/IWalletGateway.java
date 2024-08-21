@@ -8,5 +8,7 @@ import java.util.UUID;
 
 public interface IWalletGateway {
 
-    Optional<Wallet> findById(UUID walledId);
+    Optional<Wallet> findByUserId(UUID walledId);
+
+    void save(Wallet wallet);
 }
