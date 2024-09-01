@@ -5,6 +5,12 @@ services:
     ports:
       - "8082:8082"
 
+  notification:
+    build:
+      context: ./notification-api
+    ports:
+      - "8083:8083"
+
   db:
     image: postgres:12
     ports:
