@@ -1,4 +1,4 @@
-package com.gabrielrnascimento.picpaydesafiobackend.infra.http.feign;
+package com.gabrielrnascimento.picpaydesafiobackend.infra.http.feign.authorization;
 
 import com.gabrielrnascimento.picpaydesafiobackend.infra.gateways.authorization.AuthorizationStatus;
 

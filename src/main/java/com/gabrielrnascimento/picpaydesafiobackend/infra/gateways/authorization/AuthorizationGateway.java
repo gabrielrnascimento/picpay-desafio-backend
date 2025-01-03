@@ -1,8 +1,8 @@
 package com.gabrielrnascimento.picpaydesafiobackend.infra.gateways.authorization;
 
 import com.gabrielrnascimento.picpaydesafiobackend.application.gateways.IAuthorizationGateway;
-import com.gabrielrnascimento.picpaydesafiobackend.infra.http.feign.TransactionAuthorizationDTO;
-import com.gabrielrnascimento.picpaydesafiobackend.infra.http.feign.TransactionAuthorizationFeignClient;
+import com.gabrielrnascimento.picpaydesafiobackend.infra.http.feign.authorization.TransactionAuthorizationDTO;
+import com.gabrielrnascimento.picpaydesafiobackend.infra.http.feign.authorization.TransactionAuthorizationFeignClient;
 import org.springframework.stereotype.Service;
 
 

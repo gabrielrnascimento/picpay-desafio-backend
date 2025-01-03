@@ -2,8 +2,8 @@ package com.gabrielrnascimento.picpaydesafiobackend.infra.gateways;
 
 import com.gabrielrnascimento.picpaydesafiobackend.infra.gateways.authorization.AuthorizationGateway;
 import com.gabrielrnascimento.picpaydesafiobackend.infra.gateways.authorization.AuthorizationStatus;
-import com.gabrielrnascimento.picpaydesafiobackend.infra.http.feign.TransactionAuthorizationDTO;
-import com.gabrielrnascimento.picpaydesafiobackend.infra.http.feign.TransactionAuthorizationFeignClient;
+import com.gabrielrnascimento.picpaydesafiobackend.infra.http.feign.authorization.TransactionAuthorizationDTO;
+import com.gabrielrnascimento.picpaydesafiobackend.infra.http.feign.authorization.TransactionAuthorizationFeignClient;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
