@@ -2,9 +2,9 @@ package com.gabrielrnascimento.picpaydesafiobackend.application.usecases;
 
 import com.gabrielrnascimento.picpaydesafiobackend.application.gateways.IWalletGateway;
 import com.gabrielrnascimento.picpaydesafiobackend.domain.entities.Wallet;
+import com.gabrielrnascimento.picpaydesafiobackend.domain.exceptions.NotFoundException;
 import com.gabrielrnascimento.picpaydesafiobackend.domain.usecases.IGetWalletUseCase;
 
-import java.util.Optional;
 import java.util.UUID;
 
 
@@ -18,7 +18,11 @@ public class GetWalletUseCase implements IGetWalletUseCase {
 
     @Override
     public Wallet getWallet(UUID userId) {
-        Optional<Wallet> result = walletGateway.findByUserId(userId);
-        return result.orElse(null);
+        try {
+            return walletGateway.findByUserId(userId)
+                .orElseThrow(() -> new NotFoundException("Wallet"));
+        } catch (NotFoundException e) {
+            return null;
+        }
     }
 }

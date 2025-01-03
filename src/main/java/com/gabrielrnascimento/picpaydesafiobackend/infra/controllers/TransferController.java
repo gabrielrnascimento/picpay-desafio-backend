@@ -38,12 +38,18 @@ public class TransferController {
     @Transactional
     ResponseEntity<TransactionResponseDTO> generateTransaction(@Valid @RequestBody TransactionRequestDTO request) {
         var payerWallet = getWalletUseCase.getWallet(request.payer());
+        if (payerWallet == null) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new TransactionResponseDTO("Payer wallet not found"));
+        }
 
         if (!validatePayerIsCustomerUseCase.isCustomer(request.payer())) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new TransactionResponseDTO("Payer is not a customer"));
         }
 
         var payeeWallet = getWalletUseCase.getWallet(request.payee());
+        if (payeeWallet == null) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new TransactionResponseDTO("Payee wallet not found"));
+        }
 
         boolean result = authorizationGateway.isAuthorized();
         if (!result) {

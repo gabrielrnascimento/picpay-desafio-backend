@@ -22,6 +22,9 @@ public class WalletRepositoryGateway implements IWalletGateway {
     @Override
     public Optional<Wallet> findByUserId(UUID walledId) {
         var walletEntity = walletRepository.findByUserId(walledId);
+        if (walletEntity == null) {
+            return Optional.empty();
+        }
         var wallet = walletEntityMapper.toDomain(walletEntity);
         return Optional.of(wallet);
     }
