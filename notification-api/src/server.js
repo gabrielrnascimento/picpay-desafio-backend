@@ -11,7 +11,7 @@ app.get("/health-check", (req, res) => {
     });
 });
 
-app.get("/notify", (req, res) => {
+app.post("/notify", (req, res) => {
     console.log("Request received at /notify route")
     const options = ["Online", "Offline"];
     const randomIndex = Math.floor(Math.random() * options.length);

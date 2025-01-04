@@ -1,5 +1,8 @@
 secrets.properties
 
+### Kafka ###
+kafka-data/
+
 ../HELP.md
 target/
 !../.mvn/wrapper/maven-wrapper.jar
